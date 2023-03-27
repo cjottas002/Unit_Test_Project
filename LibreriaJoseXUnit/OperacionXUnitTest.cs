@@ -34,7 +34,7 @@
         {
             var op = new Operacion();
 
-            var resultado =  op.IsValorPar(numeroImpar);
+            var resultado = op.IsValorPar(numeroImpar);
 
             Assert.Equal(expectedResult, resultado);
         }
@@ -50,7 +50,7 @@
             bool isPar = op.IsValorPar(numeroPar);
 
             Assert.True(isPar);
-            
+
 
         }
 
@@ -90,7 +90,7 @@
 
             Assert.Equal(numerosImparesEsperados, resultados);
             Assert.Contains(5, resultados);
-            
+
             Assert.Contains(5, resultados);
             Assert.NotEmpty(resultados);
             Assert.Equal(3, resultados.Count);

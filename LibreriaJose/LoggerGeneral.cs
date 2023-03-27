@@ -2,8 +2,8 @@
 namespace LibreriaJose
 {
 
-	public interface ILoggerGeneral
-	{
+    public interface ILoggerGeneral
+    {
         public int PrioridadLogger { get; set; }
         public string TipoLogger { get; set; }
 
@@ -15,17 +15,17 @@ namespace LibreriaJose
         bool MessageConObjetoReferenciaReturnBoolean(ref Cliente cliente);
     }
 
-	public class LoggerGeneral : ILoggerGeneral
-	{
+    public class LoggerGeneral : ILoggerGeneral
+    {
         public int PrioridadLogger { get; set; }
         public string TipoLogger { get; set; }
 
         public bool LogBalanceDespuesRetiro(int balancedespuesRetiro)
         {
-            if(balancedespuesRetiro >= 0)
+            if (balancedespuesRetiro >= 0)
             {
                 Console.WriteLine("exito");
-                return true; 
+                return true;
             }
 
             Console.WriteLine("error");
@@ -40,12 +40,12 @@ namespace LibreriaJose
 
         public void Message(string message)
         {
-			Console.WriteLine(message);
+            Console.WriteLine(message);
         }
 
         public bool MessageConObjetoReferenciaReturnBoolean(ref Cliente cliente)
         {
-            return true; 
+            return true;
         }
 
         public bool MessageConOutParametroReturnBoolean(string str, out string outputStr)
@@ -78,7 +78,7 @@ namespace LibreriaJose
 
         public void Message(string message)
         {
-          
+
         }
 
         public bool MessageConObjetoReferenciaReturnBoolean(ref Cliente cliente)
@@ -95,7 +95,7 @@ namespace LibreriaJose
 
         public string MessageConReturnStr(string message)
         {
-            return string.Empty; 
+            return string.Empty;
         }
     }
 }

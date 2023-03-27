@@ -1,22 +1,22 @@
 ﻿using System;
 namespace LibreriaJose
 {
-	public class Producto
-	{
-		public int Id { get; set; }
+    public class Producto
+    {
+        public int Id { get; set; }
 
-		public string Nombre { get; set; }
+        public string Nombre { get; set; }
 
-		public double Precio { get; set; }
+        public double Precio { get; set; }
 
-		public double GetPrecio(Cliente cliente)
-		{
-			if (cliente.IsPremium)
-			{
-				return Precio * .8; 
+        public double GetPrecio(Cliente cliente)
+        {
+            if (cliente.IsPremium)
+            {
+                return Precio * .8;
             }
 
-			return Precio;
+            return Precio;
         }
 
         public double GetPrecio(ICliente cliente)
