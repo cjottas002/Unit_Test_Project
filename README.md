@@ -1,3 +1,3 @@
 # Unit_Test_Project
 
-Project about unit test in three different microsoft unit test exist
+This is a project containing unit tests using three different Microsoft unit testing frameworks
