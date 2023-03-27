@@ -35,22 +35,24 @@ namespace LibreriaJoseNUnitTest
 
 		[Test]
 		public void Deposito_InputMonto100Mocking_ReturnsTrue()
-		{
-			var mocking = new Mock<ILoggerGeneral>();
+        {
+            var mocking = new Mock<ILoggerGeneral>();
 			// arrange
 			var cuentaBancaria = new CuentaBancaria(mocking.Object);
 
 			// act
 			var resultado = cuentaBancaria.Deposito(100);
+            Assert.Multiple(() =>
+            {
 
 
-			// assert
-			Assert.IsTrue(resultado);
-			Assert.That(cuentaBancaria.GetBalance, Is.EqualTo(100));
+                // assert
+                Assert.That(resultado, Is.True);
+                Assert.That(cuentaBancaria.GetBalance, Is.EqualTo(100));
+            });
+        }
 
-		}
-
-		[Test]
+        [Test]
 		[TestCase(200, 100)]
 		[TestCase(200, 150)]
 		public void Retiro_Retiro100ConBalance200_ReturnsTrue(int balance, int retiro)
